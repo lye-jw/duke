@@ -4,6 +4,7 @@ import duke.fxgui.DialogBox;
 import duke.task.Task;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
@@ -115,7 +116,7 @@ public class Ui {
      *
      * @param tasks ArrayList of Tasks to be displayed.
      */
-    public void printSearchList(ArrayList<Task> tasks) {
+    public void printSearchList(List<Task> tasks) {
         String list = "Here are the matching tasks in your list:";
         for (Task task : tasks) {
             list += "\n" + (tasks.indexOf(task) + 1) + ". " + task.toString();
