@@ -25,7 +25,6 @@ public class DialogBox extends HBox {
     private Label dialog;
     @FXML
     private ImageView displayPicture;
-    private String type;
 
     /**
      * Initializes a dialog box in the GUI.
@@ -35,8 +34,6 @@ public class DialogBox extends HBox {
      * @param type Indication of whether dialog box is for "user" or "duke" dialog.
      */
     public DialogBox(String text, Image img, String type) {
-        this.type = type;
-
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(MainWindow.class.getResource("/view/DialogBox.fxml"));
             fxmlLoader.setController(this);

@@ -61,7 +61,7 @@ public class AddCommand extends Command {
                         + "\"deadline description /by end time\"\n");
             }
             String[] splitStringD = userInput.split(" /by ");
-            LocalDateTime inputDateD = Parser.convertToDate(splitStringD[1], Parser.DATE_FORMATS);
+            LocalDateTime inputDateD = Parser.convertToDate(splitStringD[1], Parser.dateFormats);
             String inputDateStrD = inputDateD == null ? splitStringD[1]
                     : inputDateD.format(Parser.OUTPUT_FORMAT);
             Deadline deadline = new Deadline(splitStringD[0].replace("deadline ", ""), 0,
@@ -79,7 +79,7 @@ public class AddCommand extends Command {
                         + "\"event description /at period\"\n");
             }
             String[] splitStringE = userInput.split(" /at ");
-            LocalDateTime inputDateE = Parser.convertToDate(splitStringE[1], Parser.DATE_FORMATS);
+            LocalDateTime inputDateE = Parser.convertToDate(splitStringE[1], Parser.dateFormats);
             String inputDateStrE = inputDateE == null ? splitStringE[1]
                     : inputDateE.format(Parser.OUTPUT_FORMAT);
             Event event = new Event(splitStringE[0].replace("event ", ""), 0,

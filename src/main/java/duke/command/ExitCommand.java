@@ -18,6 +18,9 @@ public class ExitCommand extends Command {
     public void execute(TaskList tasks, Ui ui, Storage storage) {
     }
 
+    /**
+     * Terminates the program.
+     */
     public static void exit() {
         // Thread.sleep() and Timeout.SECONDS.sleep() don't work as System shuts down without printing exit message.
         // Use ScheduledExecutorService to make System exit after a delay, after exit message is printed.

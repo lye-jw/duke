@@ -107,7 +107,7 @@ public class Duke extends Application {
     /**
      * Handles reading of input and input and producing of output.
      */
-    public void handleUserInput() {
+    private void handleUserInput() {
         boolean isExit = false;
         try {
             String fullCommand = ui.readInput();

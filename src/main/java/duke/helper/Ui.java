@@ -4,7 +4,6 @@ import duke.fxgui.DialogBox;
 import duke.task.Task;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
@@ -16,7 +15,6 @@ import javafx.scene.layout.VBox;
  * Handles reading from user input and printing to user interface.
  */
 public class Ui {
-    private Scanner scan;
     public String separationLine = "__";
     private VBox dialogContainer;
     private TextField userInput;
@@ -30,7 +28,6 @@ public class Ui {
      * @param userInput TextField that UI should read user input from.
      */
     public Ui(VBox dialogContainer, TextField userInput) {
-        scan = new Scanner(System.in);
         this.dialogContainer = dialogContainer;
         this.userInput = userInput;
     }

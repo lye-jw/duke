@@ -19,7 +19,7 @@ import java.time.format.DateTimeParseException;
  */
 public class Parser {
     public static String filePath;
-    public static DateTimeFormatter DATE_FORMATS = new DateTimeFormatterBuilder()
+    public static DateTimeFormatter dateFormats = new DateTimeFormatterBuilder()
             .appendOptional(DateTimeFormatter.ofPattern("dd/M/yyyy HH:mm"))
             .appendOptional(DateTimeFormatter.ofPattern("dd-M-yyyy HH:mm"))
             .appendOptional(DateTimeFormatter.ofPattern("dd.M.yyyy HH:mm"))
@@ -89,12 +89,12 @@ public class Parser {
      * Converts String of certain formats to Date object.
      *
      * @param dateString  String to be converted to Date.
-     * @param DATE_FORMATS DateTimeFormatter specifying format patterns to parse input String.
+     * @param dateFormats DateTimeFormatter specifying format patterns to parse input String.
      * @return Date converted from String.
      */
-    public static LocalDateTime convertToDate(String dateString, DateTimeFormatter DATE_FORMATS) {
+    public static LocalDateTime convertToDate(String dateString, DateTimeFormatter dateFormats) {
         try {
-            return LocalDateTime.parse(dateString, DATE_FORMATS);
+            return LocalDateTime.parse(dateString, dateFormats);
         } catch (DateTimeParseException de) {
             return null;
         }
